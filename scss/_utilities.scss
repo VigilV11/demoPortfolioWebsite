@@ -1,0 +1,25 @@
+%btn-common {
+  padding: 10px;
+  margin: 10px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn {
+  &-light {
+    @extend %btn-common;
+    background-color: $light-color;
+    color: $dark-color;
+
+    &:hover {
+      background-color: darken($light-color, 10%);
+    }
+  }
+}
+
+a[class^='btn-']:hover,
+button[class^='btn-']:hover,
+input[class^='btn-']:hover {
+  background-color: $main-color;
+}

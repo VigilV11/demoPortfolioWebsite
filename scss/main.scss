@@ -1,5 +1,6 @@
 // Partials
 @import 'config';
+@import 'utilities';
 
 // Fonts
 // @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
@@ -15,7 +16,8 @@
 body {
   font-family: 'Dosis', sans-serif;
   line-height: 1.6;
-  background-color: #fff;
+  // background-color: #fff;
+  background-color: steelblue;
 }
 
 a {
@@ -35,4 +37,90 @@ h4 {
 
 img {
   width: 100%;
+}
+
+// Header
+
+#header {
+  background: $bg-image no-repeat center center/cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: $light-color;
+
+  h1 {
+    font-size: 4rem;
+    margin-top: -8rem;
+    margin-bottom: 1rem;
+  }
+
+  h1:hover {
+    span:before {
+      content: '"Just ';
+      color: $main-color;
+    }
+    span:after {
+      content: ' it"';
+      color: $main-color;
+    }
+  }
+
+  p {
+    font-size: 1.7rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+// Navigation menu
+
+#main-nav {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px 0;
+
+  img {
+    width: 80px;
+    height: 80px;
+    transition: all 1s;
+  }
+
+  img:hover {
+    transform: rotate(360deg);
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    margin: 0 2rem;
+  }
+
+  a {
+    color: $light-color;
+    font-size: 1rem;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.3rem;
+    border-radius: 1px;
+    transition: all 0.5s;
+  }
+
+  a:hover {
+    border-color: lighten($main-color, 30%);
+  }
+
+  a.current {
+    border-color: $main-color;
+  }
 }

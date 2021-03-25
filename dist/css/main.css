@@ -1,4 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap");
+.btn-light {
+  padding: 10px;
+  margin: 10px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-light {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.btn-light:hover {
+  background-color: #dbdbdb;
+}
+
+a[class^='btn-']:hover,
+button[class^='btn-']:hover,
+input[class^='btn-']:hover {
+  background-color: #ffbc00;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +31,7 @@
 body {
   font-family: 'Dosis', sans-serif;
   line-height: 1.6;
-  background-color: #fff;
+  background-color: steelblue;
 }
 
 a {
@@ -28,5 +51,86 @@ h4 {
 
 img {
   width: 100%;
+}
+
+#header {
+  background: url("../images/showcase.jpg") no-repeat center center/cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: #f4f4f4;
+}
+
+.header-content h1 {
+  font-size: 4rem;
+  margin-top: -8rem;
+  margin-bottom: 1rem;
+}
+
+.header-content h1:hover span:before {
+  content: '"Just ';
+  color: #ffbc00;
+}
+
+.header-content h1:hover span:after {
+  content: ' it"';
+  color: #ffbc00;
+}
+
+.header-content p {
+  font-size: 1.7rem;
+  margin-bottom: 0.8rem;
+}
+
+#main-nav {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px 0;
+}
+
+#main-nav img {
+  width: 80px;
+  height: 80px;
+  transition: all 1s;
+}
+
+#main-nav img:hover {
+  transform: rotate(360deg);
+}
+
+#main-nav ul {
+  display: flex;
+}
+
+#main-nav li {
+  margin: 0 2rem;
+}
+
+#main-nav a {
+  color: #f4f4f4;
+  font-size: 1rem;
+  border-bottom: 3px transparent solid;
+  padding-bottom: 0.3rem;
+  border-radius: 1px;
+  transition: all 0.5s;
+}
+
+#main-nav a:hover {
+  border-color: #ffe499;
+}
+
+#main-nav a.current {
+  border-color: #ffbc00;
 }
 /*# sourceMappingURL=main.css.map */
