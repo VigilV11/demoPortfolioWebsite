@@ -477,3 +477,45 @@ img {
     column-gap: 4rem;
   }
 }
+
+// Testimonials section
+#testimonials {
+  .testimonials-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+    margin-top: -1rem;
+
+    .testimonial-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .testimonial-text {
+        border: 1px solid $medium-color;
+        border-radius: 4px;
+        margin-bottom: 1.3rem;
+
+        p {
+          font-size: 0.8rem;
+          line-height: 1.4;
+          text-align: center;
+        }
+      }
+
+      img {
+        border-radius: 50%;
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-bottom: 0.2rem;
+      }
+
+      p {
+        // display: inline-block;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
