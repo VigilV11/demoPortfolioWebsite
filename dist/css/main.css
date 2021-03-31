@@ -23,6 +23,65 @@ input[class^='btn-']:hover {
   background-color: #ffbc00;
 }
 
+.work-items-grid {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  transition: all 1s;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.work-items-grid .work-item {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.work-items-grid .work-item-text-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 40%;
+  left: auto;
+  opacity: 0;
+}
+
+.work-items-grid .work-item-text-content p:first-child {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.work-items-grid .work-item-text-content p:last-child {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.work-items-grid .work-item:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ffbc00;
+  z-index: 10;
+  opacity: 0.9;
+  transform: scale(2) translate3d(-100%, -100%, 0) rotate(45deg);
+  transition: all 2s cubic-bezier(0, 0.64, 0.53, 0.53);
+}
+
+.work-items-grid .work-item:hover:after {
+  content: '';
+  transform: scale(2) translate3d(0, 0, 0) rotate(45deg);
+}
+
+.work-items-grid .work-item:hover .work-item-text-content {
+  z-index: 50;
+  opacity: 1;
+  transition: all 1s cubic-bezier(0, 0.64, 0.53, 0.53) 0.9s;
+}
+
 * {
   margin: 0;
   padding: 0;
