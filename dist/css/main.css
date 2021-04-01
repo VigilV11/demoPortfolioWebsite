@@ -68,7 +68,7 @@ input[class^='btn-']:hover {
   z-index: 10;
   opacity: 0.9;
   transform: scale(2) translate3d(-100%, -100%, 0) rotate(45deg);
-  transition: all 2s cubic-bezier(0, 0.64, 0.53, 0.53);
+  transition: all 0.5s cubic-bezier(0, 0.64, 0.53, 0.53);
 }
 
 .work-items-grid .work-item:hover:after {
@@ -79,7 +79,7 @@ input[class^='btn-']:hover {
 .work-items-grid .work-item:hover .work-item-text-content {
   z-index: 50;
   opacity: 1;
-  transition: all 1s cubic-bezier(0, 0.64, 0.53, 0.53) 0.9s;
+  transition: all 0.5s cubic-bezier(0, 0.64, 0.53, 0.53) 0.3s;
 }
 
 * {
@@ -565,5 +565,108 @@ img {
 
 #testimonials .testimonials-container .testimonial-item p {
   font-size: 0.8rem;
+}
+
+.contact-form-grid {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact-form-grid input {
+  height: 2rem;
+  padding: 0 10px;
+  font-size: 0.6rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.contact-form-grid input:focus {
+  outline: none;
+  border-color: #ffbc00;
+}
+
+.contact-form-grid textarea {
+  grid-row: 3 / span 3;
+  grid-column: 1 / span 2;
+  padding: 10px 10px;
+  font-size: 0.8rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.contact-form-grid textarea:focus {
+  outline: none;
+  border-color: #ffbc00;
+}
+
+.contact-form-grid input[type='submit'] {
+  margin: 1rem auto;
+  width: 60%;
+  grid-column: 1 / span 2;
+  border: 0;
+  background-color: #333;
+  color: #f4f4f4;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.5s;
+  height: 2.5rem;
+}
+
+.contact-form-grid input[type='submit']:hover {
+  background-color: #ffde80;
+  color: #333;
+}
+
+.contact-icons {
+  width: 100%;
+  height: 10rem;
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+.contact-icons .icon-container {
+  margin: auto;
+  width: 60%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+}
+
+.contact-icons .contact-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-icons .contact-item i {
+  font-size: 1.3rem;
+}
+
+.contact-icons .contact-item p:nth-child(2) {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.contact-icons .contact-item p:nth-child(3) {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.call-to-action {
+  font-size: 3rem;
+  font-weight: 500;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffbc00;
+  color: #f4f4f4;
 }
 /*# sourceMappingURL=main.css.map */
