@@ -128,16 +128,6 @@ img {
   align-items: center;
   padding: 30px 40px 0;
 
-  // img {
-  //   width: 80px;
-  //   height: 80px;
-  //   transition: all 1s;
-  // }
-
-  img:hover {
-    transform: rotate(360deg);
-  }
-
   h1 {
     font-family: 'Lobster', cursive;
     font-weight: 300;
@@ -203,12 +193,10 @@ img {
   .section-description {
     font-weight: 500;
     padding-bottom: 2.5rem;
+    text-align: center;
   }
 
   &-items {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     padding: 0 5%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -380,6 +368,8 @@ img {
 
   .about-photo {
     // height: 10rem;
+    display: flex;
+    align-items: center;
     object-fit: cover;
   }
 
@@ -570,7 +560,7 @@ img {
 
     &:hover {
       // background-color: lighten($dark-color, 15%);
-      background-color: lighten($main-color, 25%);
+      background-color: lighten(green, 55%);
       color: $dark-color;
     }
   }
@@ -597,6 +587,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     i {
       font-size: 1.3rem;
@@ -623,6 +614,10 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   background-color: $main-color;
   color: $light-color;
 }
+
+// Import media queries
+@import 'media';

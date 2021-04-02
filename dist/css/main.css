@@ -195,10 +195,6 @@ img {
   padding: 30px 40px 0;
 }
 
-#main-nav img:hover {
-  transform: rotate(360deg);
-}
-
 #main-nav h1 {
   font-family: 'Lobster', cursive;
   font-weight: 300;
@@ -263,6 +259,7 @@ img {
 .section .section-description {
   font-weight: 500;
   padding-bottom: 2.5rem;
+  text-align: center;
 }
 
 .section-items {
@@ -432,6 +429,8 @@ img {
 }
 
 .about-me-grid .about-photo {
+  display: flex;
+  align-items: center;
   object-fit: cover;
 }
 
@@ -616,7 +615,7 @@ img {
 }
 
 .contact-form-grid input[type='submit']:hover {
-  background-color: #ffde80;
+  background-color: #9aff9a;
   color: #333;
 }
 
@@ -641,6 +640,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .contact-icons .contact-item i {
@@ -666,7 +666,252 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   background-color: #ffbc00;
   color: #f4f4f4;
+}
+
+@media (max-width: 800px) {
+  #header-main {
+    height: 30rem;
+  }
+  #header-main .header-content {
+    padding-top: 5rem;
+  }
+  #header-inner-pages {
+    height: 11vh;
+  }
+  #specialization .section-description {
+    text-align: center;
+  }
+  #specialization .section-items {
+    padding: 0 1%;
+  }
+  #stats .stats-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  #creative-process .section-description {
+    text-align: center;
+  }
+  #creative-process .section-items {
+    padding: 0 1%;
+  }
+  .about-me-grid {
+    width: 100%;
+  }
+  #logos {
+    padding: 3rem;
+  }
+  #logos .image-container {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2.8rem;
+  }
+  #testimonials .testimonials-container {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 1.5rem;
+  }
+  #testimonials .testimonials-container .testimonial-item .testimonial-text {
+    margin-bottom: 0.8rem;
+  }
+  #testimonials .testimonials-container .testimonial-item .testimonial-text p {
+    padding: 0.8rem;
+  }
+  .work-items-grid {
+    margin: 3.8rem 0;
+    width: 100%;
+  }
+  .work-items-grid .work-item {
+    margin-bottom: -0.5rem;
+  }
+  .work-items-grid .work-item-text-content {
+    top: 40%;
+    left: auto;
+  }
+  .work-items-grid .work-item-text-content p:first-child {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .work-items-grid .work-item-text-content p:last-child {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 500px) {
+  #header-main {
+    height: 45vh;
+  }
+  #header-inner-pages {
+    height: 20vh;
+  }
+  .header-content h1 {
+    font-size: 2rem;
+  }
+  .header-content p,
+  .header-content a {
+    display: none;
+  }
+  #main-nav {
+    flex-direction: column;
+    padding: 5px 15px 0;
+  }
+  #main-nav h1 {
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+  }
+  #main-nav li {
+    margin: 0 0.7rem;
+  }
+  .section {
+    padding: 3rem 2rem;
+  }
+  .section .section-items {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+  }
+  #stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #stats div:nth-child(1) {
+    background-color: #f4f4f4;
+  }
+  #stats div:nth-child(2) {
+    background-color: #ccc;
+  }
+  #stats div:nth-child(3) {
+    background-color: #ccc;
+  }
+  #stats div:nth-child(4) {
+    background-color: #f4f4f4;
+  }
+  .about-me-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about-me-grid .about-description {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .about-me-grid .about-description p:first-child {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+  }
+  .about-me-grid .about-description p:last-child {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+  .about-me-grid .award {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+  }
+  .about-me-grid .award i {
+    color: #ffbc00;
+    margin-bottom: 0.7rem;
+  }
+  .about-me-grid .award p:nth-child(2) {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+  }
+  .about-me-grid .award p:last-child {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+  #logos {
+    padding: 1.5rem;
+  }
+  #logos .image-container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+  }
+  #testimonials .testimonials-container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 1.5rem;
+  }
+  #testimonials .testimonials-container .testimonial-item .testimonial-text {
+    margin-bottom: 0.8rem;
+  }
+  #testimonials .testimonials-container .testimonial-item .testimonial-text p {
+    padding: 0.8rem;
+  }
+  .work-items-grid {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .work-items-grid .work-item {
+    margin-bottom: -0.5rem;
+  }
+  .work-items-grid .work-item-text-content {
+    top: 35%;
+  }
+  .work-items-grid .work-item:after {
+    height: 60%;
+  }
+  .contact-form-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact-form-grid textarea {
+    height: 5rem;
+  }
+  .contact-form-grid input[type='submit'] {
+    margin: 0.2rem auto;
+  }
+  .contact-icons {
+    height: 20rem;
+  }
+  .contact-icons .icon-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .call-to-action {
+    font-size: 2rem;
+  }
+}
+
+@media (max-height: 500px) {
+  #header-main {
+    height: 100vh;
+  }
+  #header-main .header-content {
+    padding-top: 0;
+  }
+  #header-main .header-content h1 {
+    font-size: 3rem;
+    margin-top: -4rem;
+  }
+  #header-main .header-content a {
+    display: none;
+  }
+  #main-nav {
+    padding: 0 15px 0;
+  }
+  #main-nav h1 {
+    font-size: 2rem;
+  }
+  #main-nav li {
+    margin: 0 1.2rem;
+  }
+  #header-inner-pages {
+    height: 22vh;
+  }
 }
 /*# sourceMappingURL=main.css.map */
