@@ -1,1 +1,1 @@
-![Website Image]('./demoPorfolioWebsiteImage.png')
+![Website Image](./demoPorfolioWebsiteImage.png)
